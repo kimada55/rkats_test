@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.13'
-gem 'sqlite3'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -27,3 +27,12 @@ gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem "letter_opener"
 gem "twitter-bootstrap-rails"
+
+group :development, :test do
+  gem 'sqlite3'
+  #gem 'ruby-debug19', :require => 'ruby-debug' # MOD KIMADA 2/21/2013 Commented out
+end
+group :production do
+  gem 'therubyracer-heroku', :platform => :ruby # MOD KIMADA 2/21/2013 Added
+  gem 'pg'
+end
