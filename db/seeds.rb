@@ -17,8 +17,8 @@
 #puts 'user: ' << user.name
 #user.add_role :admin
 #alternative 
-puts 'SETTNG UP DEFAULT USER LOGIN'
- user = User.create! :name=>'First User', :email => 'user@example.com', :password => 'please'
+# puts 'SETTNG UP DEFAULT USER LOGIN'
+ user = User.create! :name=>'First User', :email => 'user@example.com', :password => 'changeme'
  puts 'New user created: ' << user.name
- user2 = User.create! :name=> 'Second User', :email => 'user2@example.com', :password => 'please'
+ user2 = User.create! :name=> 'Second User', :email => 'user2@example.com', :password => 'changeme'
  user.add_role :admin
